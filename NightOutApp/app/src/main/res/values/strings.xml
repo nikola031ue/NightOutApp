@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">NightOutApp</string>
+    <string name="lokal">LOKAL</string>
+    <string name="korisnik">KORISNIK</string>
+    <string name="o_aplikaciji">O aplikaciji</string>
+    <string name="podesavanja">Podesavanja</string>
+    <string name="rezervisi">Rezervisi</string>
+    <string name="lokallabel">Lokal:</string>
+    <string name="izvodjac">Izvodjac</string>
+    <string name="datum_i_vreme">Datum i vreme</string>
+    <string name="otkazi">Otkazi</string>
+    <string name="dodaj">Dodaj</string>
+    <string name="izaberi_vreme">Izaberi vreme</string>
+    <string name="izaberi_datum">Izaberi datum</string>
+    <string name="dodaj_dogadjaj">Dodaj dogadjaj</string>
+    <string name="broj_mesta">Broj mesta:</string>
+    <string name="potvrdi">Potvrdi</string>
+    <string name="opis_lokala">Opis lokala:</string>
+    <string name="zatvori">Zatvori</string>
+    <string name="korisnicko_ime">korisnicko ime...</string>
+    <string name="prijavi_se">prijavi se</string>
+    <string name="registruj_se">registruj se</string>
+    <string name="lozinka">lozinka</string>
+    <string name="sacuvaj">sacuvaj</string>
+    <string name="registracija_korisnika">Registracija korisnika</string>
+    <string name="ime_korisnika">Ime korisnika</string>
+    <string name="prijava">Prijava</string>
+    <string name="uspesno_ste_registrovani">Uspesno ste registrovani.</string>
+    <string name="registracija_lokala">Registracija lokala</string>
+    <string name="ime_lokala">ime lokala</string>
+    <string name="tip_muzike">tip muzike</string>
+    <string name="tip_lokala">tip lokala</string>
+    <string name="opis">Opis...</string>
+    <string name="creator">creator</string>
+    <string name="kreator_aplikacije">Kreator aplikacije</string>
+    <string name="kontakt_podaci">Kontakt podaci</string>
+    <string name="todo">TODO</string>
+    <string name="Tip_muzike">Tip muzike</string>
+    <string name="Tip_lokala">Tip lokala</string>
+    <string name="adresa">Adresa</string>
+    <string name="Adresa">Adresa...</string>
+    <string name="location">LOCATION</string>
+    <string name="dodaj_sliku_kamerom">Dodaj sliku kamerom</string>
+    <string name="dodaj_sliku_iz_galerije">Dodaj sliku iz galerije</string>
+    <string name="dodaj_sliku">Dodaj sliku</string>
+    <string name="uneta_slika">Uneta slika</string>
+    <string-array name="spinner_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+</resources>

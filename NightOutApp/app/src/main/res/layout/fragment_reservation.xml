@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/lokallabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNumPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/broj_mesta"
+        app:layout_constraintStart_toStartOf="@+id/tvPlace"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlace" />
+
+    <TextView
+        android:id="@+id/tvDateTimeReservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/datum_i_vreme"
+        app:layout_constraintStart_toStartOf="@+id/tvNumPeople"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumPeople" />
+
+    <TextView
+        android:id="@+id/tvDTResVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tvPlaceRes"
+        app:layout_constraintTop_toTopOf="@+id/tvDateTimeReservation" />
+
+    <TextView
+        android:id="@+id/tvPlaceRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        app:layout_constraintStart_toEndOf="@+id/tvPlace"
+        app:layout_constraintTop_toTopOf="@+id/tvPlace" />
+
+    <Button
+        android:id="@+id/btnAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/potvrdi"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancelRes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateTimeReservation" />
+
+    <Button
+        android:id="@+id/btnCancelRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/otkazi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAccept"
+        app:layout_constraintTop_toTopOf="@+id/btnAccept" />
+
+    <Spinner
+        android:id="@+id/numGuestsSpinner"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNumPeople"
+        app:layout_constraintStart_toStartOf="@+id/tvPlaceRes"
+        app:layout_constraintTop_toTopOf="@+id/tvNumPeople"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

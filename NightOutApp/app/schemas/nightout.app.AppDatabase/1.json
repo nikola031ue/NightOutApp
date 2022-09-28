@@ -1,0 +1,202 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "5272ba3191bfd8319899bed75f491ae3",
+    "entities": [
+      {
+        "tableName": "User",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idUser` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `password` TEXT, `username` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "idUser",
+            "columnName": "idUser",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "password",
+            "columnName": "password",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "username",
+            "columnName": "username",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idUser"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Event",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idEvent` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `date` TEXT, `performer` TEXT, `time` TEXT, `eventPlaceId` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "idEvent",
+            "columnName": "idEvent",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "performer",
+            "columnName": "performer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "time",
+            "columnName": "time",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "eventPlaceId",
+            "columnName": "eventPlaceId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idEvent"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Place",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idPlace` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `namePlcae` TEXT, `passwordPlace` TEXT, `usernamePlace` TEXT, `description` TEXT, `music` TEXT, `typePlace` TEXT, `pictureName` TEXT, `address` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "idPlace",
+            "columnName": "idPlace",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "namePlace",
+            "columnName": "namePlcae",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "passwordPlace",
+            "columnName": "passwordPlace",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "usernamePlace",
+            "columnName": "usernamePlace",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "music",
+            "columnName": "music",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "typePlace",
+            "columnName": "typePlace",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pictureName",
+            "columnName": "pictureName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "address",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idPlace"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Reservation",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idReservation` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `numOfGuests` INTEGER NOT NULL, `reservationEventId` INTEGER NOT NULL, `reservationUserId` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "idReservation",
+            "columnName": "idReservation",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "numOfGuests",
+            "columnName": "numOfGuests",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reservationEventId",
+            "columnName": "reservationEventId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reservationUserId",
+            "columnName": "reservationUserId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idReservation"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5272ba3191bfd8319899bed75f491ae3')"
+    ]
+  }
+}
